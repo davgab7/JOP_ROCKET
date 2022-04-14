@@ -6,5 +6,8 @@ proc = subprocess.Popen(['python', 'rocket.py', 'pe-Windows-x86-cmd'], stdin=sub
 
 rocket_commands = "Z\nP\n"
 
+output = proc.stdout.readline()
+print(output)
+
 out, _ = proc.communicate(bytes("Z\nP\n", 'utf-8'))
 print(out.decode('utf-8'))
